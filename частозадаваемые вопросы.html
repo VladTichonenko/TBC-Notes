@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            background-color: #393737;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .faq-item {
+            background-color: #706773;
+            border: 1px solid #6a5b7c;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .faq-item:hover {
+            background-color: #9c7db1;
+        }
+
+        .faq-item:active {
+            background-color: #444;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #6c5587;
+            border-left: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>FAQ</h1>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Как добавить напоминания о задачах?</strong>
+        <div class="faq-answer">Бот автоматически напоминает вам 2 раза в день о невыполненных планах.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Что я получу за реферала?</strong>
+        <div class="faq-answer">Если пользователь привел более 5 рефералов, он бесплатно получает Pro-версию на 3 месяца.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Как купить Pro-версию?</strong>
+        <div class="faq-answer">Чтобы узнать подробнее и приобрести Pro-версию, нажмите на кнопку меню или вызовите команду /Pro.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Как посмотреть статистику выполненных мною задач?</strong>
+        <div class="faq-answer">Чтобы посмотреть количество выполненных вами команда, перейдите в раздел «Мой профиль» или вызовите команду /Acount.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Другие вопросы?</strong>
+        <div class="faq-answer">Если у вас есть другие вопросы или предложения, вы можете отправить их нам на электронную почту по адресу tbcworld006@gmail.com, Спасибо! .</div>
+    </div>
+
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.querySelector('.faq-answer');
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
